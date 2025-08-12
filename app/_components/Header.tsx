@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation"; // ✅ Import hook
 import { Button } from "../_components/ui/button";
 import { Menu, X, Building2 } from "lucide-react";
 
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
- 
+  const pathname = usePathname(); // ✅ Get current path
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -17,9 +17,9 @@ const Header = () => {
   ];
 
   const isActive = (href: string) => {
-    if (href === "/") return location.pathname === "/";
-    if (href.startsWith("#")) return false; // Handle scroll sections differently
-    return location.pathname === href;
+    if (href === "/") return pathname === "/";
+    if (href.startsWith("#")) return false;
+    return pathname === href;
   };
 
   return (
