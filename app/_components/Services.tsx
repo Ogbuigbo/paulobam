@@ -1,22 +1,38 @@
 "use client"
 
 import { Card, CardContent } from "../_components/ui/card";
+import { Button } from "../_components/ui/button";
 import { 
   Shirt, 
-  Apple, 
   Truck, 
   Building, 
   Factory, 
   Home, 
   Ship, 
   Fuel,
-  FileText
+  FileText,
+  ChevronRight
 } from "lucide-react";
-import constructionImage from "@/assets/construction.jpg";
-import logisticsImage from "@/assets/logistics.jpg";
-import manufacturingImage from "@/assets/manufacturing.jpg";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+// Generated professional images
+const fashionFoodImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/fashion-food-distribution_xyvj5k.jpg";
+const importExportImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/import-export-logistics_klgq7w.jpg";
+const constructionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/construction-site_hqjz9u.jpg";
+const manufacturingImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/manufacturing-plant_kgv0xq.jpg";
+const realEstateImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/real-estate-development_ijhqyf.jpg";
+const marineLeasingImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/marine-equipment_ojx8wz.jpg";
+const roadConstructionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/road-construction_ql9k1f.jpg";
+const petroleumImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/petroleum-products_zjzq1q.jpg";
+const contractsImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/business-contracts_jrqk9a.jpg";
 
 const Services = () => {
   const services = [
@@ -24,13 +40,13 @@ const Services = () => {
       icon: <Shirt className="w-8 h-8" />,
       title: "Fashion & Food Distribution",
       description: "Comprehensive distribution networks for fashion and food products across Nigeria and West Africa.",
-      image: null
+      image: fashionFoodImage
     },
     {
       icon: <Truck className="w-8 h-8" />,
       title: "Import & Export Services",
       description: "Global trade facilitation with expertise in customs, logistics, and international commerce.",
-      image: logisticsImage
+      image: importExportImage
     },
     {
       icon: <Building className="w-8 h-8" />,
@@ -48,186 +64,199 @@ const Services = () => {
       icon: <Home className="w-8 h-8" />,
       title: "Real Estate & Property",
       description: "Property consultancy, real estate development, and investment advisory services.",
-      image: null
+      image: realEstateImage
     },
     {
       icon: <Ship className="w-8 h-8" />,
       title: "Equipment & Marine Leasing",
       description: "Heavy-duty equipment rental and marine vessel leasing for industrial operations.",
-      image: null
+      image: marineLeasingImage
     },
     {
       icon: <Building className="w-8 h-8" />,
       title: "Road Construction",
       description: "Road construction and maintenance services with modern equipment and techniques.",
-      image: null
+      image: roadConstructionImage
     },
     {
       icon: <Fuel className="w-8 h-8" />,
       title: "Petroleum Products",
       description: "Marketing and distribution of petroleum products across Nigeria.",
-      image: null
+      image: petroleumImage
     },
     {
       icon: <FileText className="w-8 h-8" />,
       title: "General Contracts",
       description: "General contracting and merchandise services for diverse business needs.",
-      image: null
+      image: contractsImage
     }
   ];
 
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 30,
-      scale: 0.95
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0
-    }
-  };
-
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="relative overflow-hidden py-24 bg-gray-50">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 -z-10 opacity-10">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0di00aC00djRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBIMzR2NGgtNHYyaDR2NGgyVjZoNFY0aC00ek02IDM0di00SDR2NEgwdjJoNHY0SDZ2LTRoNHYtMkg2ek02IDRWMEg0djRIMHYyaDR2NEg2VjZoNFY0SDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div 
-          className="text-center mb-16"
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
-            What We Do
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive services across multiple sectors, delivering excellence 
-            and innovation in every project we undertake.
-          </p>
-        </motion.div>
+        <div className="relative mb-16 text-center">
+          <motion.div 
+            className="absolute -left-8 -top-8 w-32 h-32 bg-gold/20 rounded-full blur-3xl -z-10"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          />
+          
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-navy mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Our <span className="text-gold">Services</span>
+          </motion.h2>
+          
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Comprehensive services across multiple sectors, delivering excellence and innovation.
+          </motion.p>
+          
+          <motion.div 
+            className="absolute -right-8 -bottom-8 w-48 h-48 bg-blue-800/20 rounded-full blur-3xl -z-10"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          />
+        </div>
 
-        {/* Services Grid */}
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-              whileHover={{ 
-                scale: 1.03,
-                y: -8,
-                transition: { duration: 0.2 }
-              }}
-            >
-              <Card 
-                className="group hover:shadow-elegant transition-all duration-300 border-0 bg-white overflow-hidden"
-              >
-                <CardContent className="p-0">
-                  {/* Service Image */}
-                  {service.image && (
-                    <motion.div 
-                      className="h-48 overflow-hidden"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.3 }}
-                    >
+        {/* Services Carousel */}
+        <div className="relative">
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            pagination={{ 
+              clickable: true,
+              el: '.services-pagination',
+              type: 'bullets',
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            className="pb-12" // Added padding for pagination
+          >
+            {services.map((service, index) => (
+              <SwiperSlide key={index}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  whileHover={{ 
+                    y: -10,
+                    transition: { duration: 0.2 }
+                  }}
+                  className="h-full"
+                >
+                  <Card className="relative h-full bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border-0">
+                    {/* Image with gradient overlay */}
+                    <div className="relative h-48 overflow-hidden">
                       <Image 
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-300"
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        quality={100}
                       />
-                    </motion.div>
-                  )}
-                  
-                  {/* Service Content */}
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <motion.div 
-                        className="flex items-center justify-center w-12 h-12 bg-gradient-gold rounded-lg mr-4 text-navy"
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
-                      >
-                        {service.icon}
-                      </motion.div>
-                      <h3 className="text-xl font-semibold text-navy group-hover:text-gold transition-colors">
-                        {service.title}
-                      </h3>
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent"></div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
+                    
+                    <CardContent className="p-8">
+                      <div className="flex items-center mb-6">
+                        <div className="w-12 h-12 bg-gradient-to-r from-gold to-amber-500 rounded-xl flex items-center justify-center mr-4 text-white">
+                          {service.icon}
+                        </div>
+                        <h3 className="text-xl font-bold text-navy group-hover:text-blue-800 transition-colors">
+                          {service.title}
+                        </h3>
+                      </div>
+                      
+                      <p className="text-gray-600 leading-relaxed mb-6">
+                        {service.description}
+                      </p>
+                      
+                      <div className="flex items-center text-blue-600 font-medium group-hover:text-blue-800 transition-colors">
+                        Learn more <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-        {/* Call to Action */}
+          {/* Custom Pagination - centered below the carousel */}
+          <div className="services-pagination flex justify-center mt-6 !relative"></div>
+        </div>
+
+        {/* CTA Section */}
         <motion.div 
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="relative rounded-3xl overflow-hidden mt-20"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
         >
-          <p className="text-lg text-muted-foreground mb-6">
-            Need a customized solution for your business?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button 
-              onClick={() => window.location.href = '/contact'}
-              className="px-8 py-3 bg-gradient-primary text-white rounded-lg font-semibold hover:shadow-elegant transition-all duration-300"
-              whileHover={{ 
-                scale: 1.05,
-                y: -2,
-                transition: { duration: 0.2 }
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Custom Quote
-            </motion.button>
-            <motion.button 
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border-2 border-navy text-navy rounded-lg font-semibold hover:bg-navy hover:text-white transition-all duration-300"
-              whileHover={{ 
-                scale: 1.05,
-                y: -2,
-                transition: { duration: 0.2 }
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More About Us
-            </motion.button>
+          <div className="absolute inset-0 bg-gradient-to-r from-navy to-blue-900"></div>
+          <div className="absolute inset-0 bg-[url('https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/abstract-pattern_dqgx9o.png')] opacity-10"></div>
+          
+          <div className="relative z-10 p-12 md:p-16 lg:p-20 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Need a Custom Solution?
+            </h3>
+            
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              We tailor our services to meet your specific business requirements.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                variant="gold"
+                className="px-12 py-6 text-lg font-semibold group"
+                onClick={() => window.location.href = '/contact'}
+              >
+                Get a Custom Quote
+                <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button 
+                variant="outline"
+                className="px-12 py-6 text-lg font-semibold group border-white text-white hover:bg-white/10"
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Learn About Us
+              </Button>
+            </div>
           </div>
         </motion.div>
       </div>

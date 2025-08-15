@@ -10,6 +10,8 @@ All colors MUST be HSL.
   --background: 0 0% 100%;
   --foreground: 220 26% 14%;
 
+    --font-inter: 'Inter', sans-serif;
+
   --card: 0 0% 100%;
   --card-foreground: 220 26% 14%;
 
@@ -113,6 +115,7 @@ All colors MUST be HSL.
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
+  font-family: var(--font-inter);
 }
 
 /* Additional utility classes you might need */

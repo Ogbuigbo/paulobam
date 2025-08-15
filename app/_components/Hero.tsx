@@ -80,14 +80,14 @@ const Hero = () => {
           animate="visible"
         >
           {/* Badge */}
-          <motion.div 
+          {/* <motion.div 
             className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8"
             variants={itemVariants}
             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <Shield className="w-4 h-4 text-gold mr-2" />
             <span className="text-white text-sm font-medium">RC: 7268414 | Registered December 2023</span>
-          </motion.div>
+          </motion.div> */}
 
           {/* Main Heading */}
           <motion.h1 
@@ -188,17 +188,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
-        variants={scrollIndicatorVariants}
-        initial="hidden"
-        animate="visible"
-        transition={{ delay: 1.5, duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-      >
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </motion.div>
+     
     </section>
   );
 };

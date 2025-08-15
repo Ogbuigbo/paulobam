@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation"; // ✅ Import hook
 import { Button } from "../_components/ui/button";
 import { Menu, X, Building2 } from "lucide-react";
+import Link from "next/link";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
@@ -50,7 +51,7 @@ const Header = () => {
                 }`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
