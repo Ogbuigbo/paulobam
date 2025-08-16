@@ -26,15 +26,15 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-elegant">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="flex items-center justify-center w-10 h-10 bg-gradient-primary rounded-lg">
-              <Building2 className="w-6 h-6 text-white" />
+            <div className="flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-lg">
+              <Building2 className="w-7 h-7 text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-navy">PAULOTAM</h1>
-              <p className="text-xs text-muted-foreground -mt-1">GLOBAL SERVICES</p>
+              <h1 className="text-xl font-bold text-navy">PAULOTAM</h1>
+              <p className="text-sm text-muted-foreground -mt-1">GLOBAL SERVICES</p>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors duration-200 ${
+                className={`text-base font-medium transition-colors duration-200 py-2 ${
                   isActive(item.href)
                     ? "text-gold border-b-2 border-gold"
                     : "text-navy hover:text-gold"
@@ -57,7 +57,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="gold" size="sm">
+            <Button variant="gold" size="default">
               Get Quote
             </Button>
           </div>

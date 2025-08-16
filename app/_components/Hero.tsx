@@ -69,7 +69,8 @@ const Hero = () => {
         backgroundImage: `linear-gradient(135deg, rgba(27, 43, 71, 0.9), rgba(27, 43, 71, 0.7)), url("https://res.cloudinary.com/dpkn1ppzj/image/upload/v1754952739/hero-bg_zsrw90.jpg")`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
+        backgroundAttachment: 'fixed',
+        paddingBottom: "40px"
       }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -91,7 +92,7 @@ const Hero = () => {
 
           {/* Main Heading */}
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mt-24 lg:mt-10 text-white mb-6 leading-tight"
             variants={itemVariants}
             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
@@ -144,7 +145,7 @@ const Hero = () => {
 
           {/* Key Stats */}
           <motion.div 
-            className="grid grid-cols-2 items-center justify-center md:grid-cols-3 gap-8 max-w-3xl mx-auto"
+            className="flex flex-wrap items-center justify-center md:grid-cols-3 gap-8 max-w-3xl mx-auto"
             variants={statsVariants}
             initial="hidden"
             animate="visible"
