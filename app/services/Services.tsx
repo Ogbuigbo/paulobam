@@ -14,11 +14,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const Services = () => {
-
-
   const services = [
     {
       icon: <Shirt className="w-6 h-6" />,
@@ -101,9 +98,9 @@ const Services = () => {
             {/* Section Header */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              ref={ref}
+              viewport={{ once: true, margin: "-100px" }}
               className="text-center mb-16"
             >
               <h1 className="text-4xl md:text-5xl font-bold text-navy mb-4">
@@ -120,7 +117,8 @@ const Services = () => {
             <motion.div
               variants={containerVariants}
               initial="hidden"
-              animate={inView ? "visible" : "hidden"}
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {services.map((service, index) => (
@@ -176,8 +174,9 @@ const Services = () => {
             {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
+              whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
+              viewport={{ once: true, margin: "-100px" }}
               className="text-center mt-20"
             >
               <div className="bg-gradient-to-r from-navy/5 via-white to-navy/5 py-12 px-6 rounded-xl">
