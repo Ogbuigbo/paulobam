@@ -4,6 +4,7 @@ import { Card, CardContent } from "../_components/ui/card";
 import { Button } from "../_components/ui/button";
 import { 
   Shirt, 
+  Utensils,
   Truck, 
   Building, 
   Factory, 
@@ -24,23 +25,29 @@ import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
 // Generated professional images
-const fashionFoodImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/fashion-food-distribution_xyvj5k.jpg";
-const importExportImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/import-export-logistics_klgq7w.jpg";
-const constructionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/construction-site_hqjz9u.jpg";
-const manufacturingImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/manufacturing-plant_kgv0xq.jpg";
-const realEstateImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/real-estate-development_ijhqyf.jpg";
-const marineLeasingImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/marine-equipment_ojx8wz.jpg";
-const roadConstructionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/road-construction_ql9k1f.jpg";
-const petroleumImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/petroleum-products_zjzq1q.jpg";
-const contractsImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1719876543/business-contracts_jrqk9a.jpg";
+const fashionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755332862/front-view-man-working-repair-sale-service_50_dyfazc.jpg";
+const foodImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755333276/top-view-bunch-fresh-food-donation-with-copy-space_xtse0l.jpg";
+const importExportImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755333416/close-up-delivery-person-giving-parcel-client_pd6xmz.jpg";
+const constructionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755333871/african-american-worker-standing-uniform-wearing-safety-hat-factory_1_qvtypx.jpg";
+const manufacturingImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755335705/woman-working-as-engineer_fsn3s0.jpg";
+const realEstateImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755334255/man-working-environment-project-close-up_z5uola.jpg";
+const marineLeasingImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755334438/big-ship-dry-dock_dhkhzy.jpg";
+const petroleumImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755335407/field-with-oil-pump-jacks-surrounded-by-greenery-sunlight_50_fcn5sx.jpg";
+const contractsImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755334864/crop-businessman-signing-papers_50_jjw0zw.jpg";
 
 const Services = () => {
   const services = [
     {
       icon: <Shirt className="w-8 h-8" />,
-      title: "Fashion & Food Distribution",
-      description: "Comprehensive distribution networks for fashion and food products across Nigeria and West Africa.",
-      image: fashionFoodImage
+      title: "Fashion Distribution",
+      description: "Comprehensive distribution networks for fashion apparel and accessories across Nigeria and West Africa.",
+      image: fashionImage
+    },
+    {
+      icon: <Utensils className="w-8 h-8" />,
+      title: "Food Distribution",
+      description: "Reliable supply chain solutions for food products, ensuring quality and timely delivery to markets.",
+      image: foodImage
     },
     {
       icon: <Truck className="w-8 h-8" />,
@@ -72,12 +79,7 @@ const Services = () => {
       description: "Heavy-duty equipment rental and marine vessel leasing for industrial operations.",
       image: marineLeasingImage
     },
-    {
-      icon: <Building className="w-8 h-8" />,
-      title: "Road Construction",
-      description: "Road construction and maintenance services with modern equipment and techniques.",
-      image: roadConstructionImage
-    },
+  
     {
       icon: <Fuel className="w-8 h-8" />,
       title: "Petroleum Products",
@@ -97,7 +99,7 @@ const Services = () => {
       {/* Decorative elements */}
       <div className="absolute inset-0 -z-10 opacity-10">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white to-transparent"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0di00aC00djRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBIMzR2NGgtNHYyaDR2NGgyVjZoNFY0aC00ek02IDM0di00SDR2NEgwdjJoNHY0SDZ2LTRoNHYtMkg2ek02IDRWMEg0djRIMHYyaDR2NEg2VjZoNFY0SDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjJnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0di00aC00djRoLTR2Mmg0djRoMnYtNGg0di0yaC00em0wLTMwVjBIMzR2NGgtNHYyaDR2NGgyVjZoNFY0aC00ek02IDM0di00SDR2NEgwdjJoNHY0SDZ2LTRoNHYtMkg2ek02IDRWMEg0djRIMHYyaDR2NEg2VjZoNFY0SDZ6Ii8+PC9nPjwvZz48L3N2Zz4=')]"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +166,7 @@ const Services = () => {
               disableOnInteraction: false,
             }}
             loop={true}
-            className="pb-12" // Added padding for pagination
+            className="pb-12"
           >
             {services.map((service, index) => (
               <SwiperSlide key={index}>
@@ -251,7 +253,7 @@ const Services = () => {
               </Button>
               <Button 
                 variant="outline"
-                className="px-12 py-6 text-lg font-semibold group border-white text-black hover:bg-white/10"
+                className="px-12 py-6 text-lg font-semibold group border-white text-white hover:bg-white/10"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn About Us
