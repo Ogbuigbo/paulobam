@@ -3,7 +3,6 @@
 import { Card, CardContent } from "../_components/ui/card";
 import { 
   Shirt, 
-  Apple, 
   Truck, 
   Building, 
   Factory, 
