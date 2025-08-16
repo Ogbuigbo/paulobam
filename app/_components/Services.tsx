@@ -253,7 +253,7 @@ const Services = () => {
               </Button>
               <Button 
                 variant="outline"
-                className="px-12 py-6 text-lg font-semibold group border-white text-white hover:bg-white/10"
+                className="px-12 py-6 text-lg font-semibold group border-white text-black hover:bg-white/10"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn About Us

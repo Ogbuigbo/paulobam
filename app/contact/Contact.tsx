@@ -328,24 +328,24 @@ const Contact = () => {
                         />
                       </div>
 
-                      <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
-                        <Button 
-                          type="submit" 
-                          variant="default"
-                          size="lg" 
-                          disabled={isSubmitting}
-                          className="w-full bg-gradient-to-r from-gold to-amber-500 text-white hover:from-amber-500 hover:to-gold transition-all shadow-md"
-                        >
-                          {isSubmitting ? (
-                            "Sending Message..."
-                          ) : (
-                            <>
-                              Send Message
-                              <Send className="w-5 h-5 ml-2" />
-                            </>
-                          )}
-                        </Button>
-                      </motion.div>
+                   <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
+  <Button 
+    type="submit" 
+    variant="navy" // Changed back to your original navy variant
+    size="lg" 
+    disabled={isSubmitting}
+    className="w-full hover:bg-blue-800 transition-all shadow-md"
+  >
+    {isSubmitting ? (
+      "Sending Message..."
+    ) : (
+      <>
+        Send Message
+        <Send className="w-5 h-5 ml-2" />
+      </>
+    )}
+  </Button>
+</motion.div>
                     </form>
                   </CardContent>
                 </Card>
