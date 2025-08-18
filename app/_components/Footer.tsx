@@ -2,14 +2,14 @@
 
 import { Building2, Mail, MapPin, Phone, Calendar } from "lucide-react";
 
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "#services" },
-    { name: "About Us", href: "#about" },
+    { name: "Services", href: "/services" },
+    { name: "About Us", href: "/about" },
+        { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -53,6 +53,13 @@ const Footer = () => {
                     paulotam@ymail.com
                   </a>
                 </div>
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 text-gold mr-3" />
+                  <a href="tel:08055778829" className="text-gray-300 hover:text-gold transition-colors">
+                    0805 577 8829, 0810 115 4850
+                  </a>
+                </div>
+               
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-gold mr-3 mt-1" />
                   <span className="text-gray-300 text-sm">

@@ -78,7 +78,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-navy">PAULOTAM</h1>
-              <p className="text-sm text-muted-foreground -mt-1">GLOBAL SERVICES</p>
+              <p className="text-sm text-muted-foreground -mt-1">GLOBAL SERVICES LTD</p>
             </div>
           </Link>
 

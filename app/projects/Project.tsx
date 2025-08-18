@@ -7,6 +7,7 @@ import { Button } from '../_components/ui/button'
 import ProjectCard from './ProjectCard'
 import ProjectFilter from './ProjectFilter'
 import {Project, mockProjects, ProjectCounts, Filters } from '@/lib/data'
+import ProjectModal from './ProjectModal'
 
 
 function Projects() {
@@ -220,6 +221,12 @@ function Projects() {
             )}
           </section>
 
+             {/* Project Modal */}
+        <ProjectModal
+          project={selectedProject}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        />
           
     </div>
   )

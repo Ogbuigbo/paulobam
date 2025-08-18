@@ -89,7 +89,7 @@ const HeroSection = () => {
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/2348123456789?text=Hello%20Paulotam%20Global%20Services%2C%20I%20would%20like%20to%20discuss%20a%20business%20partnership",
+      "https://wa.me/2348118452043?text=Hello%20Paulotam%20Global%20Services%2C%20I%20would%20like%20to%20discuss%20a%20business%20partnership",
       "_blank",
     );
   };
@@ -139,7 +139,7 @@ const HeroSection = () => {
                 </span>
               </h1>
               <p className="text-xl text-white/80 leading-relaxed max-w-2xl">
-                Paulotam Global Services delivers excellence across 9 business
+                Paulotam Global Services LTD delivers excellence across 9 business
                 verticals, combining Nigerian market expertise with
                 international standards to drive your success forward.
               </p>
@@ -147,7 +147,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services-hub-nine-sector-exploration">
+              <Link href="/services">
                 <Button
                   variant="default"
                   size="lg"
@@ -164,7 +164,7 @@ const HeroSection = () => {
                 className="border-white/30 text-black hover:bg-white/10 font-semibold px-8 py-4 gap-2"
               >
                 <MessageCircle className="w-5 h-5" />
-                Start Partnership
+                Contact Us
               </Button>
             </div>
 
