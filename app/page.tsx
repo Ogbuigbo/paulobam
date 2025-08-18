@@ -3,6 +3,7 @@ import Header from "./_components/Header";
 import Hero from "./_components/Hero";
 import About from "./_components/About";
 import Services from "./_components/Services";
+import WhatsAppFloat from "./_components/Whatsapp";
 
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
     <Hero/>
     <About/>
     <Services/>
-    
+    <WhatsAppFloat/>
   </div>
 
   );
