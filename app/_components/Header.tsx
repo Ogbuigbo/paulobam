@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "../_components/ui/button";
 import { Menu, X, Building2, Home, Briefcase, Users, FolderOpen, Handshake, Shield, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,8 +49,6 @@ const Header = () => {
     }
   ];
 
-
-
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
     if (href.startsWith("#")) return false;
@@ -67,18 +66,20 @@ const Header = () => {
         : "bg-white"
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24"> {/* Changed from h-20 to h-24 */}
           {/* Logo Section */}
           <Link 
             href="/" 
-            className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200"
+            className=""
           >
-            <div className="flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-lg">
-              <Building2 className="w-7 h-7 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-navy">PAULOTAM</h1>
-              <p className="text-sm text-muted-foreground -mt-1">GLOBAL SERVICES LTD</p>
+            <div className="">
+              <Image
+                src="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755540901/Untitled_design_1_k16xev.png"
+                width={200}
+                height={100}
+                alt="logo-image"
+                className="w-[250px] h-[95px] "
+              />
             </div>
           </Link>
 
@@ -98,14 +99,10 @@ const Header = () => {
                 <span>{item.name}</span>
               </Link>
             ))}
-            
-            
           </nav>
 
           {/* Right Section */}
           <div className="flex items-center space-x-4">
-         
-
             {/* WhatsApp CTA */}
             <div className="px-3 py-2">
                 <Button variant="gold" size="sm" className="w-full">
