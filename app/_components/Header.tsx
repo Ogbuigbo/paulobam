@@ -65,7 +65,7 @@ const Header = () => {
         ? "bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-elegant" 
         : "bg-white"
     }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 sm:px-2 lg:px-8">
         <div className="flex items-center justify-between h-24"> {/* Changed from h-20 to h-24 */}
           {/* Logo Section */}
           <Link 
@@ -78,7 +78,7 @@ const Header = () => {
                 width={200}
                 height={100}
                 alt="logo-image"
-                className="w-[250px] h-[95px] "
+                className="md:w-[250px] w-[200px] h-[95px] "
               />
             </div>
           </Link>
@@ -104,7 +104,7 @@ const Header = () => {
           {/* Right Section */}
           <div className="flex items-center space-x-4">
             {/* WhatsApp CTA */}
-            <div className="px-3 py-2">
+            <div className="px-3 py-2 hidden md:flex">
               <Link href="/contact">
                 <Button variant="gold" size="sm" className="w-full">
                   Get Quote
@@ -158,7 +158,7 @@ const Header = () => {
               </div>
 
               {/* Mobile WhatsApp CTA */}
-              <div className="mt-4 px-3 py-2">
+              {/* <div className="mt-4 px-3 py-2">
                 <Button
                   variant="gold"
                   size="sm"
@@ -168,6 +168,13 @@ const Header = () => {
                   <MessageCircle className="w-5 h-5" />
                   <span>WhatsApp</span>
                 </Button>
+              </div> */}
+               <div className="px-3 py-2 ">
+              <Link href="/contact">
+                <Button variant="gold" size="sm" className="w-full">
+                  Get Quote
+                </Button>
+                </Link>
               </div>
             </div>
           </div>

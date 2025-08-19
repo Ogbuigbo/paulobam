@@ -127,7 +127,7 @@ function Projects() {
      <Hero/> 
 
       {/* Projects Section */}
-          <section id="projects-section" className='px-20 mt-8 pb-16'>
+          <section id="projects-section" className='lg:px-20 md:px-10 px-6 mt-8 pb-16'>
             {/* Project Filters */}
             <ProjectFilter
               filters={filters}

@@ -95,7 +95,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-primary via-primary/95 to-primary overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-primary via-primary/95 to-primary overflow-hidden pt-10">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-accent rounded-full blur-3xl animate-float"></div>

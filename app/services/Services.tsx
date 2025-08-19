@@ -87,7 +87,7 @@ const ServicesPage = () => {
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary via-primary to-primary text-white py-16 lg:py-24">
-          <div className="pt-[2rem] mx-auto px-4">
+          <div className="pt-[4rem] mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex items-center justify-center space-x-2 mb-6">
                 <Grid3x3 className="w-8 h-8 text-accent" />
