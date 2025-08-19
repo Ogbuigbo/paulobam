@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 // Placeholder for generated images - replace with your actual image paths
 const officeImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755283578/african-video-editor-looking-camera-smiling-editing-video-project-post-production-software-wor_ate8sz.jpg";
@@ -448,6 +449,7 @@ const About = () => {
               transition={{ delay: 0.6 }}
               viewport={{ once: true }}
             >
+              <Link href="/contact">
               <Button 
                 variant="gold"
                 className="px-12 py-6 text-lg font-semibold group"
@@ -455,6 +457,7 @@ const About = () => {
                 Contact Our Team
                 <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
+              </Link>
             </motion.div>
           </div>
         </motion.div>

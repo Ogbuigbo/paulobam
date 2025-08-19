@@ -105,9 +105,11 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             {/* WhatsApp CTA */}
             <div className="px-3 py-2">
+              <Link href="/contact">
                 <Button variant="gold" size="sm" className="w-full">
                   Get Quote
                 </Button>
+                </Link>
               </div>
 
             {/* Mobile Menu Toggle */}

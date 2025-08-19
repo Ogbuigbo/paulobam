@@ -254,7 +254,7 @@ const Services = () => {
               <Button 
                 variant="outline"
                 className="px-12 py-6 text-lg font-semibold group border-white text-black hover:bg-white/10"
-                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.location.href = '/about'}
               >
                 Learn About Us
               </Button>
