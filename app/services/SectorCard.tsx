@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Icon, { LucideIconName } from '../_components/AppIcon';
 import { Button } from '../_components/ui/button';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface RecentProject {
   description: string;
@@ -19,7 +20,7 @@ interface Sector {
   id: string;
   name: string;
   image: string;
- icon: LucideIconName;
+  icon: LucideIconName;
   shortDescription: string;
   projectCount: number;
   locations: string | string[];
@@ -37,9 +38,24 @@ interface SectorCardProps {
 
 const SectorCard: React.FC<SectorCardProps> = ({ sector, onInquire }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const router = useRouter();
 
   const handleInquire = () => {
     onInquire(sector);
+  };
+
+  const handleLearnMore = () => {
+    // Special routing for Food Distribution and Fashion sectors
+    if (sector.id === "10") {
+      // Food Distribution sector
+      router.push('/services/food-distribution');
+    } else if (sector.id === "11") {
+      // Fashion & Apparel sector
+      router.push('/services/fashion-apparel');
+    } else {
+      // Default behavior for other sectors
+      setIsExpanded(!isExpanded);
+    }
   };
 
   return (
@@ -87,7 +103,7 @@ const SectorCard: React.FC<SectorCardProps> = ({ sector, onInquire }) => {
             <div className="flex items-center space-x-1">
               <Icon name="MapPin" size={16} className="text-accent" />
               <span className="text-sm font-medium text-text-secondary">
-                {sector.locations} Locations
+                {typeof sector.locations === 'string' ? sector.locations : sector.locations.join(', ')}
               </span>
             </div>
           </div>
@@ -187,17 +203,15 @@ const SectorCard: React.FC<SectorCardProps> = ({ sector, onInquire }) => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setIsExpanded(!isExpanded)}
-         
+            onClick={handleLearnMore}
             className="flex-1"
           >
-            {isExpanded ? "Show Less" : "Learn More"}
+            {sector.id === "10" || sector.id === "11" ? "Explore" : isExpanded ? "Show Less" : "Learn More"}
           </Button>
           <Button
             variant="default"
             size="sm"
             onClick={handleInquire}
-         
           >
             Inquire
           </Button>
