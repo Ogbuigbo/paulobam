@@ -7,43 +7,43 @@ import Icon from '../../_components/AppIcon';
 const FoodDistributionPage = () => {
   // Sample data for African food products
   const foodCategories = [
-    {
-      id: 1,
-      name: "Grains & Cereals",
-      image: "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg",
-      products: ["Rice", "Maize", "Millet", "Sorghum", "Wheat"]
-    },
-    {
-      id: 2,
-      name: "Tubers & Roots",
-      image: "https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg",
-      products: ["Yam", "Cassava", "Sweet Potato", "Cocoyam", "Plantain"]
-    },
-    {
-      id: 3,
-      name: "Vegetables",
-      image: "https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg",
-      products: ["Spinach", "Okra", "Tomatoes", "Peppers", "Onions"]
-    },
-    {
-      id: 4,
-      name: "Fruits",
-      image: "https://images.pexels.com/photos/2272854/pexels-photo-2272854.jpeg",
-      products: ["Mangoes", "Oranges", "Pineapples", "Bananas", "Pawpaw"]
-    },
-    {
-      id: 5,
-      name: "Legumes & Nuts",
-      image: "https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg",
-      products: ["Beans", "Groundnuts", "Soybeans", "Bambara nuts", "Cowpeas"]
-    },
-    {
-      id: 6,
-      name: "Proteins",
-      image: "https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg",
-      products: ["Beef", "Poultry", "Fish", "Goat Meat", "Eggs"]
-    }
-  ];
+ {
+  id: 1,
+  name: "Grains & Cereals",
+  image: "https://images.pexels.com/photos/4110258/pexels-photo-4110258.jpeg?auto=compress&cs=tinysrgb&w=600",
+  products: ["Rice", "Maize", "Millet", "Sorghum", "Wheat"]
+},
+  {
+    id: 2,
+    name: "Tubers & Roots",
+    image: "https://images.pexels.com/photos/1327533/pexels-photo-1327533.jpeg", // fresh yams & cassava
+    products: ["Yam", "Cassava", "Sweet Potato", "Cocoyam", "Plantain"]
+  },
+  {
+    id: 3,
+    name: "Vegetables",
+    image: "https://images.pexels.com/photos/143133/pexels-photo-143133.jpeg", // African market vegetables
+    products: ["Spinach", "Okra", "Tomatoes", "Peppers", "Onions"]
+  },
+  {
+    id: 4,
+    name: "Fruits",
+    image: "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg", // tropical fruits basket
+    products: ["Mangoes", "Oranges", "Pineapples", "Bananas", "Pawpaw"]
+  },
+  {
+    id: 5,
+    name: "Legumes & Nuts",
+    image: "https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg", // beans & nuts closeup
+    products: ["Beans", "Groundnuts", "Soybeans", "Bambara nuts", "Cowpeas"]
+  },
+  {
+    id: 6,
+    name: "Proteins",
+    image: "https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg", // fish & meat market
+    products: ["Beef", "Poultry", "Fish", "Goat Meat", "Eggs"]
+  }
+];
 
   const services = [
     {

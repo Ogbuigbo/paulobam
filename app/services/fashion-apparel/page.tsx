@@ -10,37 +10,37 @@ const FashionApparelPage = () => {
     {
       id: 1,
       name: "Traditional Attire",
-      image: "https://images.pexels.com/photos/8942186/pexels-photo-8942186.jpeg",
+       image: "https://images.pexels.com/photos/8942186/pexels-photo-8942186.jpeg?auto=compress&cs=tinysrgb&w=600",
       items: ["Ankara Dresses", "Aso Ebi", "Kente Outfits", "Agbada", "Boubous"]
     },
     {
       id: 2,
       name: "Modern African Wear",
-      image: "https://images.pexels.com/photos/9146686/pexels-photo-9146686.jpeg",
+      image: "https://images.pexels.com/photos/1841189/pexels-photo-1841189.jpeg?auto=compress&cs=tinysrgb&w=600",
       items: ["African Print Suits", "Contemporary Dresses", "Fusion Wear", "Designer Pieces", "Statement Outfits"]
     },
     {
       id: 3,
       name: "Accessories",
-      image: "https://images.pexels.com/photos/14565997/pexels-photo-14565997.jpeg",
+      image: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600",
       items: ["Beaded Jewelry", "Headwraps/Gele", "African Print Bags", "Leather Goods", "Traditional Footwear"]
     },
     {
       id: 4,
       name: "Textiles & Fabrics",
-      image: "https://images.pexels.com/photos/3738089/pexels-photo-3738089.jpeg",
+      image: "https://images.pexels.com/photos/1304469/pexels-photo-1304469.jpeg?auto=compress&cs=tinysrgb&w=600", 
       items: ["Ankara Prints", "Kente Cloth", "Aso Oke", "Adire", "Bogolan Mud Cloth"]
     },
     {
       id: 5,
       name: "Children's Wear",
-      image: "https://images.pexels.com/photos/4065181/pexels-photo-4065181.jpeg",
+      image: "https://images.pexels.com/photos/913254/pexels-photo-913254.jpeg?auto=compress&cs=tinysrgb&w=600",
       items: ["Traditional Outfits", "Modern Styles", "Celebration Wear", "School Uniforms", "Casual Wear"]
     },
     {
       id: 6,
       name: "Unisex Collections",
-      image: "https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg",
+      image: "https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg?auto=compress&cs=tinysrgb&w=600",
       items: ["African Print Shirts", "Dashikis", "Kaftans", "Matching Sets", "Loungewear"]
     }
   ];
