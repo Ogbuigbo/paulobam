@@ -104,7 +104,7 @@ const FashionApparelPage = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-96 w-full">
+      <section className="relative h-96 w-full pt-28">
         <Image
           src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg"
           alt="African Fashion Distribution"
@@ -113,7 +113,7 @@ const FashionApparelPage = () => {
           priority
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <div className="text-center text-white px-4">
+          <div className="text-center text-white px-4 pt-28">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">African Fashion & Apparel</h1>
             <p className="text-xl mb-8">Distributing authentic African fashion to the world</p>
             <Button size="lg" className="bg-primary hover:bg-primary/90">

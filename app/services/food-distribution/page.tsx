@@ -100,7 +100,7 @@ const FoodDistributionPage = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-96 w-full">
+      <section className="relative h-96 w-full pt-28">
         <Image
           src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg"
           alt="African Food Distribution"
@@ -109,7 +109,7 @@ const FoodDistributionPage = () => {
           priority
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <div className="text-center text-white px-4">
+          <div className="text-center text-white px-4 pt-28">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">African Food Distribution</h1>
             <p className="text-xl mb-8">Connecting authentic African cuisine to markets worldwide</p>
             <Button size="lg" className="bg-primary hover:bg-primary/90">
