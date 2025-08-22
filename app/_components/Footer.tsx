@@ -22,7 +22,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   // WhatsApp number (you can customize this)
-  const whatsappNumber = "2348055778829"; // Format: country code + number without +
+  const whatsappNumber = ""; // Format: country code + number without +
   const whatsappMessage = "Hello! I'm interested in your services.";
   
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
