@@ -10,13 +10,13 @@ const FoodDistributionPage = () => {
  {
   id: 1,
   name: "Grains & Cereals",
-  image: "https://images.pexels.com/photos/4110258/pexels-photo-4110258.jpeg?auto=compress&cs=tinysrgb&w=600",
+  image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755854859/sacks-healthy-legumes-grains_13_zp5ev0.jpg",
   products: ["Rice", "Maize", "Millet", "Sorghum", "Wheat"]
 },
   {
     id: 2,
     name: "Tubers & Roots",
-    image: "https://images.pexels.com/photos/1327533/pexels-photo-1327533.jpeg", // fresh yams & cassava
+    image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755855095/photorealistic-portrait-african-woman_1_13_urjpnj.jpg", // fresh yams & cassava
     products: ["Yam", "Cassava", "Sweet Potato", "Cocoyam", "Plantain"]
   },
   {
