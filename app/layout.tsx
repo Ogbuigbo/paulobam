@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PAULOTAM GLOBAL SERVICES", 
+  title: "PAULOTAM GLOBAL SERVICES LTD", 
   description: "Your Reliable Partner in Distribution, Construction, and Global Services",
 };
 

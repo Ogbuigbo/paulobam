@@ -48,7 +48,7 @@ const SectorCard: React.FC<SectorCardProps> = ({ sector, onInquire }) => {
     // Special routing for Food Distribution and Fashion sectors
     if (sector.id === "10") {
       // Food Distribution sector
-      router.push('/services/food-distribution');
+      router.push('/services/food-supplies');
     } else if (sector.id === "11") {
       // Fashion & Apparel sector
       router.push('/services/fashion-apparel');
