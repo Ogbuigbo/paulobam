@@ -74,11 +74,11 @@ const Header = () => {
           >
             <div className="">
               <Image
-                src="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755540901/Untitled_design_1_k16xev.png"
-                width={200}
-                height={100}
+                src="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756138374/Untitled_design_2_kqsslo.png"
+                width={300}
+                height={500}
                 alt="logo-image"
-                className="md:w-[250px] w-[200px] h-[95px] "
+                className="md:w-[200px] w-[150px] h-[95px] "
               />
             </div>
           </Link>

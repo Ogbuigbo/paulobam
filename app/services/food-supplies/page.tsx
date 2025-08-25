@@ -417,7 +417,7 @@ const FoodDistributionPage = () => {
                   className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                   <Icon name="MessageCircle" size={20} className="mr-2" />
-                  08118452043
+                  +234 08118452043
                 </a>
               </div>
 
