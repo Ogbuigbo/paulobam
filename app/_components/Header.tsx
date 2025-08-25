@@ -74,7 +74,7 @@ const Header = () => {
           >
             <div className="">
               <Image
-                src="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756138374/Untitled_design_2_kqsslo.png"
+                src="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756143658/Untitled_design_3_fs3w24.png"
                 width={300}
                 height={500}
                 alt="logo-image"
