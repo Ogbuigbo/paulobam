@@ -360,9 +360,9 @@ export const sectors: Sector[] = [
     },
     {
       id: "10",
-      name: "Food Distribution",
+      name: "Food Supplies",
       shortDescription: "Efficient food supply chain management and distribution services",
-      image: "https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756221595/dried-food-products-sold-market_35_cz9qmz.jpg",
       icon: "ShoppingCart",
       category: "logistics",
       projectCount: 95,

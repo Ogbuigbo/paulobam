@@ -151,9 +151,9 @@ const FoodDistributionPage = () => {
     },
     {
       id: 6,
-      name: "Proteins",
-      image: "https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg", // fish & meat market
-      products: ["Beef", "Poultry", "Fish", "Goat Meat", "Eggs"]
+      name: "Onions",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756222028/pile-onion-bulbs-sold-market_5_uthfl1.jpg", // fish & meat market
+      products: ["Onions"]
     }
   ];
 
@@ -214,7 +214,7 @@ const FoodDistributionPage = () => {
       {/* Hero Section */}
       <section className="relative h-96 w-full pt-28">
         <Image
-          src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg"
+          src="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756221595/dried-food-products-sold-market_35_cz9qmz.jpg"
           alt="African Food Distribution"
           fill
           className="object-cover"
