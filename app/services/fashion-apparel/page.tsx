@@ -150,7 +150,7 @@ const FashionApparelPage = () => {
                         <video 
                           controls 
                           className="w-full h-[300px] rounded-xl"
-                          poster="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756306883/thumbnail.jpg" // Optional: add a thumbnail
+                          poster="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756308159/workwear-coats-jackets-hanging-rack_29_li8heb.jpg" // Optional: add a thumbnail
                         >
                           <source 
                             src="https://res.cloudinary.com/dpkn1ppzj/video/upload/v1756306883/AQN99WsETBcfI1K01zrcpNEGiqVfnKxsi9w3CDCyE4-p19-ZqvvsxSMBuEEwupb13-UCiatZ7bCF9myK1uEE2peL_dbegid.mp4" 
