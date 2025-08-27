@@ -134,6 +134,61 @@ const FashionApparelPage = () => {
           </p>
         </div>
 
+        {/* Clothing Delivery Video Section */}
+                <div className="mb-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 shadow-lg">
+                  <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold mb-4">Our Clothing Delivery Service</h2>
+                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                      Watch how we efficiently deliver clothing items across regions with our specialized logistics network
+                    </p>
+                  </div>
+                  
+                  <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+                    {/* Video Player */}
+                    <div className="flex-1 max-w-2xl">
+                      <div className="relative rounded-xl overflow-hidden shadow-2xl">
+                        <video 
+                          controls 
+                          className="w-full h-[300px] rounded-xl"
+                          poster="https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756306883/thumbnail.jpg" // Optional: add a thumbnail
+                        >
+                          <source 
+                            src="https://res.cloudinary.com/dpkn1ppzj/video/upload/v1756306883/AQN99WsETBcfI1K01zrcpNEGiqVfnKxsi9w3CDCyE4-p19-ZqvvsxSMBuEEwupb13-UCiatZ7bCF9myK1uEE2peL_dbegid.mp4" 
+                            type="video/mp4" 
+                          />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    </div>
+                    
+                    {/* Video Description and Link */}
+                    <div className="flex-1 max-w-md text-center lg:text-left">
+                      <h3 className="text-2xl font-semibold mb-4">Efficient Clothing Logistics</h3>
+                      <p className="text-muted-foreground mb-6">
+                        Our specialized delivery service ensures that clothing items reach their destination 
+                        in perfect condition, on time, and with complete tracking visibility throughout 
+                        the journey.
+                      </p>
+                      
+                      <div className="bg-white p-6 rounded-xl shadow-md">
+                        <h4 className="font-semibold mb-3 text-lg">See More on Facebook</h4>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          Watch additional videos and see customer testimonials on our Facebook page
+                        </p>
+                        <a 
+                          href="https://web.facebook.com/100082895544838/videos/1216946240204540/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                        >
+                          <Icon name="ExternalLink" size={20} className="mr-2" />
+                          Watch on Facebook
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (

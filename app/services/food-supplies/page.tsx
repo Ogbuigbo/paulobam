@@ -242,6 +242,8 @@ const FoodDistributionPage = () => {
           </p>
         </div>
 
+        
+
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
@@ -445,22 +447,6 @@ const FoodDistributionPage = () => {
             </div>
           </div>
         </div>
-
-        {/* Call to Action */}
-        {/* <section className="bg-primary/10 py-12 px-4 rounded-lg text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Distribute Your Products?</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join our network of food producers and distributors. We handle the logistics so you can focus on what you do best.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
-              Become a Supplier
-            </Button>
-            <Button size="lg" variant="outline">
-              Request Distribution
-            </Button>
-          </div>
-        </section> */}
 
         {/* Back to Sectors */}
         <div className="text-center mt-12">
