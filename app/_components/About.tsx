@@ -188,6 +188,7 @@ const About = () => {
                     fill
                     className="object-cover"
                     quality={100}
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
                 </div>
@@ -218,6 +219,7 @@ const About = () => {
                     fill
                     className="object-cover"
                     quality={100}
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent"></div>
                 </div>
@@ -242,6 +244,7 @@ const About = () => {
                 fill
                 className="object-cover"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-8">
                 <div>
@@ -298,6 +301,7 @@ const About = () => {
               fill
               className="object-cover"
               quality={100}
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent flex items-end p-8">
               <div>

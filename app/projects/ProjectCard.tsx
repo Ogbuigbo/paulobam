@@ -51,6 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onViewDetails }) => 
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={() => setImageLoaded(true)}
+          loading='lazy'
         />
         {!imageLoaded && (
           <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">

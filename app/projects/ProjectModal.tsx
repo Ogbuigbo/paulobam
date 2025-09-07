@@ -177,6 +177,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                   src={project?.image}
                   alt={project?.title}
                   className="w-full h-full object-cover"
+                  loading='lazy'
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
@@ -330,6 +331,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                   src={project?.gallery?.[currentImageIndex]}
                   alt={`${project?.title} - Image ${currentImageIndex + 1}`}
                   className="w-full h-full object-cover"
+                  loading='lazy'
                 />
                 
                 {/* Navigation Arrows */}
@@ -368,6 +370,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                       src={image}
                       alt={`Thumbnail ${index + 1}`}
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-200"
+                      loading='lazy'
                     />
                   </button>
                 ))}

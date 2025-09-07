@@ -133,15 +133,15 @@ const FoodDistributionPage = () => {
     },
     {
       id: 3,
-      name: "Vegetables",
-      image: "https://images.pexels.com/photos/143133/pexels-photo-143133.jpeg", // African market vegetables
-      products: ["Spinach", "Okra", "Tomatoes", "Peppers", "Onions"]
+      name: "SeaFoods",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755893760/PHOTO-2025-08-22-18-41-46_5_vjwy3w.jpg", // African market vegetables
+      products: ["Dried Stock Fish", "Dried Snail", "Dried Cat Fish", "Dried Shrimp", "Dried Crabs"]
     },
     {
       id: 4,
-      name: "Fruits",
-      image: "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg", // tropical fruits basket
-      products: ["Mangoes", "Oranges", "Pineapples", "Bananas", "Pawpaw"]
+      name: "Bulk Supplies",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755893772/PHOTO-2025-08-22-18-41-47_4_wjrfzw.jpg", // tropical fruits basket
+      products: ["Dried pepper", "Dried garlic", "Dried ginger", "Dried turmeric", "Dried chili"]
     },
     {
       id: 5,
@@ -218,7 +218,7 @@ const FoodDistributionPage = () => {
           alt="African Food Distribution"
           fill
           className="object-cover"
-          priority
+          loading='lazy'
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white px-4 pt-28">
@@ -285,6 +285,7 @@ const FoodDistributionPage = () => {
                               alt={product.name}
                               fill
                               className="object-cover group-hover:scale-110 transition-transform duration-300"
+                               loading='lazy'
                             />
                           </div>
                           <div className="p-4">
@@ -354,6 +355,7 @@ const FoodDistributionPage = () => {
                   width={400}
                   height={300}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                   loading='lazy'
                 />
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>

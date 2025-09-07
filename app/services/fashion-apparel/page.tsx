@@ -5,43 +5,56 @@ import { Button } from '../../_components/ui/button';
 import Icon from '../../_components/AppIcon';
 
 const FashionApparelPage = () => {
-  // Sample data for African fashion categories
+  // Fashion categories showcasing actual clothing items
   const fashionCategories = [
     {
       id: 1,
-      name: "Traditional Attire",
-       image: "https://images.pexels.com/photos/8942186/pexels-photo-8942186.jpeg?auto=compress&cs=tinysrgb&w=600",
-      items: ["Ankara Dresses", "Aso Ebi", "Kente Outfits", "Agbada", "Boubous"]
+      name: "Jeans & Denim",
+      image: "https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=600",
+      items: ["Skinny Jeans", "Straight Fit", "Bootcut", "High Waist", "Distressed Denim"]
     },
     {
       id: 2,
-      name: "Modern African Wear",
-      image: "https://images.pexels.com/photos/1841189/pexels-photo-1841189.jpeg?auto=compress&cs=tinysrgb&w=600",
-      items: ["African Print Suits", "Contemporary Dresses", "Fusion Wear", "Designer Pieces", "Statement Outfits"]
+      name: "Polo Shirts",
+      image: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=600",
+      items: ["Classic Polo", "Long Sleeve Polo", "Performance Polo", "Striped Polo", "Color Block Polo"]
     },
     {
       id: 3,
-      name: "Accessories",
-      image: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600",
-      items: ["Beaded Jewelry", "Headwraps/Gele", "African Print Bags", "Leather Goods", "Traditional Footwear"]
+      name: "Corporate Shirts",
+      image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600",
+      items: ["Dress Shirts", "Oxford Shirts", "Button Down", "Formal Shirts", "Business Casual"]
     },
     {
       id: 4,
-      name: "Textiles & Fabrics",
+      name: "T-Shirts & Tops",
       image: "https://images.pexels.com/photos/1304469/pexels-photo-1304469.jpeg?auto=compress&cs=tinysrgb&w=600", 
-      items: ["Ankara Prints", "Kente Cloth", "Aso Oke", "Adire", "Bogolan Mud Cloth"]
+      items: ["Basic Tees", "Graphic Tees", "V-Neck", "Crew Neck", "Tank Tops"]
     },
-    {
-      id: 5,
-      name: "Children's Wear",
-      image: "https://images.pexels.com/photos/913254/pexels-photo-913254.jpeg?auto=compress&cs=tinysrgb&w=600",
-      items: ["Traditional Outfits", "Modern Styles", "Celebration Wear", "School Uniforms", "Casual Wear"]
-    },
+  
     {
       id: 6,
-      name: "Unisex Collections",
-      image: "https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg?auto=compress&cs=tinysrgb&w=600",
-      items: ["African Print Shirts", "Dashikis", "Kaftans", "Matching Sets", "Loungewear"]
+      name: "Dresses & Skirts",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1757244833/3a348fe0-2ef7-4cfb-8dd5-50118bc64e6b_yuwhlm.jpg",
+      items: ["Casual Dresses", "Formal Dresses", "Maxi Dresses", "A-Line Skirts", "Pencil Skirts"]
+    },
+    {
+      id: 7,
+      name: "Pants & Trousers",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1757244676/03ab892b-a38c-46a6-ac9d-0edc2c7fa2c8_mjnzb2.jpg",
+      items: ["Chinos", "Dress Pants", "Cargo Pants", "Wide Leg", "Tapered Fit"]
+    },
+    {
+      id: 8,
+      name: "Sports wear",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1757244214/SOUTH_AFRICA_2008_2009_AWAY_FOOTBAL_SHIRT_SOCCER_cxexts.jpg",
+      items: ["Sports Bras", "Leggings", "Athletic Shorts", "Performance Tees", "Workout Sets"]
+    },
+    {
+      id: 9,
+      name: "Footwear",
+      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1757244757/Kente_African_Print_Unisex_High_Top_Slip-on_Canvas_nu2mc8.jpg",
+      items: ["Sneakers", "Dress Shoes", "Boots", "Sandals", "Loafers"]
     }
   ];
 
@@ -110,7 +123,7 @@ const FashionApparelPage = () => {
           alt="African Fashion Distribution"
           fill
           className="object-cover"
-          priority
+          loading='lazy'
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white px-4 pt-28">
@@ -204,7 +217,7 @@ const FashionApparelPage = () => {
 
         {/* Fashion Categories */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Fashion Categories</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Clothing Categories</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {fashionCategories.map((category) => (
               <div key={category.id} className="group relative overflow-hidden rounded-lg cursor-pointer">
@@ -214,6 +227,7 @@ const FashionApparelPage = () => {
                   width={400}
                   height={300}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  loading='lazy'
                 />
                 <div className="absolute inset-0 bg-black/50 flex flex-col justify-end p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
@@ -235,79 +249,9 @@ const FashionApparelPage = () => {
           </div>
         </div>
 
-        {/* Featured Designers */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured African Designers</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {designers.map((designer, index) => (
-              <div key={index} className="bg-card rounded-lg overflow-hidden shadow-md">
-                <Image
-                  src={designer.image}
-                  alt={designer.name}
-                  width={300}
-                  height={300}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold">{designer.name}</h3>
-                  <p className="text-muted-foreground text-sm">{designer.specialty}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      
 
-        {/* Fashion Showcase */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-12">African Fashion Showcase</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="col-span-2 row-span-2">
-              <Image
-                src="https://images.pexels.com/photos/9146686/pexels-photo-9146686.jpeg"
-                alt="Fashion 1"
-                width={600}
-                height={600}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-            <div>
-              <Image
-                src="https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg"
-                alt="Fashion 2"
-                width={300}
-                height={300}
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-            <div>
-              <Image
-                src="https://images.pexels.com/photos/4065181/pexels-photo-4065181.jpeg"
-                alt="Fashion 3"
-                width={300}
-                height={300}
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-            <div>
-              <Image
-                src="https://images.pexels.com/photos/14565997/pexels-photo-14565997.jpeg"
-                alt="Fashion 4"
-                width={300}
-                height={300}
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-            <div>
-              <Image
-                src="https://images.pexels.com/photos/3738089/pexels-photo-3738089.jpeg"
-                alt="Fashion 5"
-                width={300}
-                height={300}
-                className="w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
+       
 
         {/* Call to Action */}
         <section className="bg-primary/10 py-12 px-4 rounded-lg text-center">

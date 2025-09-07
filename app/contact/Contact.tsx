@@ -1,63 +1,17 @@
 "use client"
 
-import { useState } from "react";
-import { Button } from "../_components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "../_components/ui/card";
-import { Input } from "../_components/ui/input";
-import { Textarea } from "../_components/ui/textarea";
-import { Label } from "../_components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { 
   Mail, 
   MapPin, 
-  Phone, 
   Clock, 
-  Send,
   Building2,
-  Globe,
-  FileText,
-  ChevronDown
+  FileText
 } from "lucide-react";
+import ContactUsForm from "../_components/form/Index";
+import { Card, CardContent } from "../_components/ui/card";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: "",
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        service: "",
-        message: ""
-      });
-      setIsSubmitting(false);
-    }, 1000);
-  };
 
   const contactInfo = [
     {
@@ -86,18 +40,6 @@ const Contact = () => {
     }
   ];
 
-  const services = [
-    "Fashion & Food Distribution",
-    "Import & Export Services",
-    "Civil Engineering & Construction",
-    "Manufacturing & Representation",
-    "Real Estate & Property",
-    "Equipment & Marine Leasing",
-    "Road Construction",
-    "Petroleum Products",
-    "General Contracts",
-    "Other Services"
-  ];
 
   // Animation variants
   const containerVariants = {
@@ -245,110 +187,7 @@ const Contact = () => {
                 transition={{ delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="border border-gray-100 shadow-lg overflow-hidden">
-                  <div className="bg-gradient-to-r from-navy to-blue-900 p-6 text-white">
-                    <CardTitle className="text-2xl">Send us a Message</CardTitle>
-                    <p className="text-white/90">
-                      Fill out the form below and we'll get back to you within 24 hours.
-                    </p>
-                  </div>
-                  <CardContent className="p-8">
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <Label htmlFor="name" className="text-gray-700">Full Name *</Label>
-                          <Input
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            placeholder="Your full name"
-                            required
-                            className="border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="email" className="text-gray-700">Email Address *</Label>
-                          <Input
-                            id="email"
-                            name="email"
-                            type="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            placeholder="your.email@example.com"
-                            required
-                            className="border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <Label htmlFor="company" className="text-gray-700">Company/Organization</Label>
-                          <Input
-                            id="company"
-                            name="company"
-                            value={formData.company}
-                            onChange={handleInputChange}
-                            placeholder="Your company name (optional)"
-                            className="border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="service" className="text-gray-700">Service of Interest</Label>
-                          <div className="relative">
-                            <select
-                              id="service"
-                              name="service"
-                              value={formData.service}
-                              onChange={handleInputChange}
-                              className="w-full px-4 py-2 border border-gray-300 rounded-md bg-white text-gray-700 focus:ring-2 focus:ring-gold focus:border-transparent appearance-none"
-                            >
-                              <option value="">Select a service</option>
-                              {services.map((service, index) => (
-                                <option key={index} value={service}>{service}</option>
-                              ))}
-                            </select>
-                            <ChevronDown className="absolute right-3 top-3 h-4 w-4 text-gray-400" />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="message" className="text-gray-700">Message *</Label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          placeholder="Tell us about your project, requirements, or any questions you have..."
-                          rows={6}
-                          required
-                          className="border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent"
-                        />
-                      </div>
-
-                   <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
-  <Button 
-    type="submit" 
-    variant="navy" // Changed back to your original navy variant
-    size="lg" 
-    disabled={isSubmitting}
-    className="w-full hover:bg-blue-800 transition-all shadow-md"
-  >
-    {isSubmitting ? (
-      "Sending Message..."
-    ) : (
-      <>
-        Send Message
-        <Send className="w-5 h-5 ml-2" />
-      </>
-    )}
-  </Button>
-</motion.div>
-                    </form>
-                  </CardContent>
-                </Card>
+                <ContactUsForm />
               </motion.div>
             </div>
           </div>

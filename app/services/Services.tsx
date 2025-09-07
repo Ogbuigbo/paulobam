@@ -3,13 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { 
-  Grid3x3, ArrowDown, MessageCircle, ArrowRight,
-  Shirt, Truck, Building, Factory, Home, Ship, Fuel, FileText
+  Grid3x3, ArrowDown, MessageCircle,
+  
 } from "lucide-react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+
 import { Button } from "../_components/ui/button";
-import { Card, CardContent } from "../_components/ui/card";
+
 import SectorStats from "./SectorStats";
 import CrossSectorCapabilities from "./CrossSectorCapabilities";
 import SectorCard from "./SectorCard";

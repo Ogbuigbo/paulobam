@@ -67,6 +67,7 @@ const SectorCard: React.FC<SectorCardProps> = ({ sector, onInquire }) => {
           width={400}
           height={192}
           className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+          loading='lazy'
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         <div className="absolute top-4 left-4">
