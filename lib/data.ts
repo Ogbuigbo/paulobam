@@ -88,6 +88,66 @@ export interface Filters {
 }
 
 export const sectors: Sector[] = [
+  {
+    id: "10",
+    name: "Food Supplies",
+    shortDescription: "Efficient food supply chain management and distribution services",
+    image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756221595/dried-food-products-sold-market_35_cz9qmz.jpg",
+    icon: "ShoppingCart",
+    category: "logistics",
+    projectCount: 95,
+    locations: "Lagos, Abuja, Kano, Ibadan",
+    rating: 4.7,
+    capabilities: [
+      "Cold Chain Logistics",
+      "Food Safety Management",
+      "Inventory Management",
+      "Distribution Network Optimization",
+      "Supplier Coordination",
+      "Retail Partnerships"
+    ],
+    recentProject: {
+      description: "Established nationwide distribution network for fresh produce company",
+      outcome: "Reduced food waste by 35%",
+      date: "January 2025"
+    },
+    testimonial: {
+      content: "Paulotam transformed our food distribution with their efficient cold chain solutions and strategic partnerships.",
+      author: "Chika Nwosu",
+      company: "FreshFarm Nigeria"
+    },
+    certifications: ["HACCP Certified", "ISO 22000", "FDA Approved", "NAFDAC Registered"]
+  },
+  {
+    id: "11",
+    name: "Fashion & Apparel",
+    shortDescription: "End-to-end fashion design, manufacturing, and retail solutions",
+    image: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg",
+    icon: "ShoppingBag",
+    category: "retail",
+    projectCount: 70,
+    locations: "Lagos, Abuja, Port Harcourt",
+    rating: 4.8,
+    capabilities: [
+      "Fashion Design",
+      "Textile Sourcing",
+      "Manufacturing",
+      "Brand Development",
+      "Retail Strategy",
+      "E-commerce Integration"
+    ],
+    recentProject: {
+      description: "Launched successful fashion brand with complete supply chain management",
+      outcome: "Achieved 200% ROI in first year",
+      date: "November 2024"
+    },
+    testimonial: {
+      content: "Paulotam's expertise in fashion retail helped us build a recognizable brand with efficient operations.",
+      author: "Zainab Bello",
+      company: "AfroChic Designs"
+    },
+    certifications: ["Fashion Design Council", "Textile Quality Certified", "Retail Association Member", "Export Certified"]
+  },
     {
       id: "1",
       name: "Construction & Engineering",
@@ -358,66 +418,7 @@ export const sectors: Sector[] = [
       },
       certifications: ["NBA Member", "ICSAN Certified", "Notary Public", "Arbitration Institute"]
     },
-    {
-      id: "10",
-      name: "Food Supplies",
-      shortDescription: "Efficient food supply chain management and distribution services",
-      image: "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756221595/dried-food-products-sold-market_35_cz9qmz.jpg",
-      icon: "ShoppingCart",
-      category: "logistics",
-      projectCount: 95,
-      locations: "Lagos, Abuja, Kano, Ibadan",
-      rating: 4.7,
-      capabilities: [
-        "Cold Chain Logistics",
-        "Food Safety Management",
-        "Inventory Management",
-        "Distribution Network Optimization",
-        "Supplier Coordination",
-        "Retail Partnerships"
-      ],
-      recentProject: {
-        description: "Established nationwide distribution network for fresh produce company",
-        outcome: "Reduced food waste by 35%",
-        date: "January 2025"
-      },
-      testimonial: {
-        content: "Paulotam transformed our food distribution with their efficient cold chain solutions and strategic partnerships.",
-        author: "Chika Nwosu",
-        company: "FreshFarm Nigeria"
-      },
-      certifications: ["HACCP Certified", "ISO 22000", "FDA Approved", "NAFDAC Registered"]
-    },
-    {
-      id: "11",
-      name: "Fashion & Apparel",
-      shortDescription: "End-to-end fashion design, manufacturing, and retail solutions",
-      image: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg",
-      icon: "ShoppingBag",
-      category: "retail",
-      projectCount: 70,
-      locations: "Lagos, Abuja, Port Harcourt",
-      rating: 4.8,
-      capabilities: [
-        "Fashion Design",
-        "Textile Sourcing",
-        "Manufacturing",
-        "Brand Development",
-        "Retail Strategy",
-        "E-commerce Integration"
-      ],
-      recentProject: {
-        description: "Launched successful fashion brand with complete supply chain management",
-        outcome: "Achieved 200% ROI in first year",
-        date: "November 2024"
-      },
-      testimonial: {
-        content: "Paulotam's expertise in fashion retail helped us build a recognizable brand with efficient operations.",
-        author: "Zainab Bello",
-        company: "AfroChic Designs"
-      },
-      certifications: ["Fashion Design Council", "Textile Quality Certified", "Retail Association Member", "Export Certified"]
-    }
+   
   ];
 
 

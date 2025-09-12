@@ -26,7 +26,7 @@ import 'swiper/css/autoplay';
 
 // Generated professional images
 const fashionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755332862/front-view-man-working-repair-sale-service_50_dyfazc.jpg";
-const foodImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755333276/top-view-bunch-fresh-food-donation-with-copy-space_xtse0l.jpg";
+const foodImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1756221595/dried-food-products-sold-market_35_cz9qmz.jpg";
 const importExportImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755333416/close-up-delivery-person-giving-parcel-client_pd6xmz.jpg";
 const constructionImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755333871/african-american-worker-standing-uniform-wearing-safety-hat-factory_1_qvtypx.jpg";
 const manufacturingImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v1755335705/woman-working-as-engineer_fsn3s0.jpg";
@@ -38,17 +38,18 @@ const contractsImage = "https://res.cloudinary.com/dpkn1ppzj/image/upload/v17553
 const Services = () => {
   const services = [
     {
-      icon: <Shirt className="w-8 h-8" />,
-      title: "Fashion Distribution",
-      description: "Comprehensive distribution networks for fashion apparel and accessories across Nigeria and West Africa.",
-      image: fashionImage
-    },
-    {
       icon: <Utensils className="w-8 h-8" />,
       title: "Food Distribution",
       description: "Reliable supply chain solutions for food products, ensuring quality and timely delivery to markets.",
       image: foodImage
     },
+    {
+      icon: <Shirt className="w-8 h-8" />,
+      title: "Fashion Distribution",
+      description: "Comprehensive distribution networks for fashion apparel and accessories across Nigeria and West Africa.",
+      image: fashionImage
+    },
+  
     {
       icon: <Truck className="w-8 h-8" />,
       title: "Import & Export Services",
